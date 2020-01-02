@@ -14,6 +14,8 @@
   <Project>https://github.com/greghesp/assistant-relay</Project>
   <Overview>Node.js server that exposes the Google Assistant as a REST API</Overview>
   <Registry>https://hub.docker.com/r/bradyemerson/assistant-relay/</Registry>
+  <GitHub>https://github.com/bradyemerson/docker-assistant-relay</GitHub>
+  <Network>bridge</Network>
   <Repository>bradyemerson/assistant-relay</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
@@ -29,7 +31,7 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir></HostDir>
+      <HostDir>/mnt/cache/appdata/assistant-relay</HostDir>
       <ContainerDir>/opt/assistant-relay/bin</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -37,4 +39,5 @@
   <WebUI>http://[IP]:[PORT:3000]/</WebUI>
   <Icon>https://developers.google.com/assistant/images/badges/XPM_BADGING_GoogleAssistant_VER.png</Icon>
   <BaseImage>node</BaseImage>
+  <ExtraParams></ExtraParams>
 </Container>
