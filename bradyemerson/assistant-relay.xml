@@ -9,7 +9,7 @@
   <Description>Send Assistant Relay any query you would send the Google Assistant SDK, and get a response back.[br]
   It also supports the Google Home Broadcast command so you can send audio notifications to your Google Home devices, without interrupting music.[br]
   [br][b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
-  [b]/bin[/b] : Stores config files [br]
+  [b]/opt/assistant-relay/bin[/b] : Stores config files [br]
   </Description>
   <Project>https://github.com/greghesp/assistant-relay</Project>
   <Overview>Node.js server that exposes the Google Assistant as a REST API</Overview>
@@ -39,5 +39,6 @@
   <WebUI>http://[IP]:[PORT:3000]/</WebUI>
   <Icon>https://developers.google.com/assistant/images/badges/XPM_BADGING_GoogleAssistant_VER.png</Icon>
   <BaseImage>node</BaseImage>
+  <Config Name="Config Directory" Target="/opt/assistant-relay/bin" Default="/mnt/cache/app_config/assistant-relay" Mode="rw" Description="This path is where Assistant Relay will store it's configuration files." Type="Path" Display="always" Required="true" Mask="false"/>
   <ExtraParams></ExtraParams>
 </Container>
