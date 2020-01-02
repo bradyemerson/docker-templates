@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <TemplateURL>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/thelounge.xml</TemplateURL>
+  <Beta>False</Beta>
+  <Category>Network:Messenger</Category>
+  <Date>2020-01-02</Date>
+  <Name>assistant-relay</Name>
+  <Support>https://forums.unraid.net/topic/49785-support-linuxserverio-the-lounge/</Support>
+  <Description>Send Assistant Relay any query you would send the Google Assistant SDK, and get a response back.[br]
+  It also supports the Google Home Broadcast command so you can send audio notifications to your Google Home devices, without interrupting music.[br]
+  [br][br][b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+  [b]/bin[/b] : Stores config files [br]
+  </Description>
+  <Project>https://github.com/greghesp/assistant-relay</Project>
+  <Overview>Node.js server that exposes the Google Assistant as a REST API</Overview>
+  <Registry>https://hub.docker.com/r/bradyemerson/assistant-relay/</Registry>
+  <Repository>bradyemerson/assistant-relay</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3000</HostPort>
+        <ContainerPort>3000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/opt/assistant-relay/bin</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+  <Icon>https://developers.google.com/assistant/images/badges/XPM_BADGING_GoogleAssistant_VER.png</Icon>
+  <BaseImage>node</BaseImage>
+</Container>
