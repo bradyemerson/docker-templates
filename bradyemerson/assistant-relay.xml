@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
-  <TemplateURL>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/thelounge.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/bradyemerson/docker-templates/master/bradyemerson/assistant-relay.xml</TemplateURL>
   <Beta>False</Beta>
-  <Category>Network:Messenger</Category>
+  <Category>HomeAutomation:</Category>
   <Date>2020-01-02</Date>
   <Name>assistant-relay</Name>
-  <Support>https://forums.unraid.net/topic/49785-support-linuxserverio-the-lounge/</Support>
+  <Support>https://github.com/bradyemerson/docker-assistant-relay/issues</Support>
   <Description>Send Assistant Relay any query you would send the Google Assistant SDK, and get a response back.[br]
   It also supports the Google Home Broadcast command so you can send audio notifications to your Google Home devices, without interrupting music.[br]
-  [br][br][b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+  [br][b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
   [b]/bin[/b] : Stores config files [br]
   </Description>
   <Project>https://github.com/greghesp/assistant-relay</Project>
