@@ -34,12 +34,12 @@
   <Data>
     <Volume>
       <HostDir>/mnt/cache/appdata/assistant-relay</HostDir>
-      <ContainerDir>/opt/assistant-relay/bin</ContainerDir>
+      <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment/>
   <Labels/>
-  <Config Name="Config Directory" Target="/opt/assistant-relay/bin" Default="/mnt/cache/appdata/assistant-relay" Mode="rw" Description="This path is where Assistant Relay will store it's configuration files." Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/assistant-relay</Config>
+  <Config Name="Config Directory" Target="/config" Default="/mnt/cache/appdata/assistant-relay" Mode="rw" Description="This path is where Assistant Relay will store it's configuration files." Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/assistant-relay</Config>
   <Config Name="Web Interface" Target="3000" Default="3000" Mode="tcp" Description="Container Port: 3000" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
 </Container>
