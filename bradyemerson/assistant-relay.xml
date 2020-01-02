@@ -1,25 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <Container version="2">
-  <TemplateURL>https://raw.githubusercontent.com/bradyemerson/docker-templates/master/bradyemerson/assistant-relay.xml</TemplateURL>
-  <Beta>False</Beta>
-  <Category>HomeAutomation:</Category>
-  <Date>2020-01-02</Date>
   <Name>assistant-relay</Name>
-  <Overview>Assistant Relay is a Node.js server that exposes the Google Assistant as a REST API.</Overview>
-  <Support>https://github.com/bradyemerson/docker-assistant-relay/issues</Support>
-  <Description>Send Assistant Relay any query you would send the Google Assistant SDK, and get a response back.[br]
-  It also supports the Google Home Broadcast command so you can send audio notifications to your Google Home devices, without interrupting music.[br]
-  [br][b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
-  [b]/opt/assistant-relay/bin[/b] : Stores config files [br]
-  </Description>
-  <Project>https://github.com/greghesp/assistant-relay</Project>
-  <Overview>Node.js server that exposes the Google Assistant as a REST API</Overview>
-  <Registry>https://hub.docker.com/r/bradyemerson/assistant-relay/</Registry>
-  <GitHub>https://github.com/bradyemerson/docker-assistant-relay</GitHub>
   <Repository>bradyemerson/assistant-relay</Repository>
-  <BindTime>true</BindTime>
+  <Registry>https://hub.docker.com/r/bradyemerson/assistant-relay/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Environment/>
+  <Support>https://github.com/bradyemerson/docker-assistant-relay/issues</Support>
+  <Project>https://github.com/greghesp/assistant-relay</Project>
+  <Overview>Assistant Relay is a Node.js server that exposes the Google Assistant as a REST API.</Overview>
+  <Category>HomeAutomation:</Category>
+  <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/bradyemerson/docker-templates/master/bradyemerson/assistant-relay.xml</TemplateURL>
+  <Icon>https://developers.google.com/assistant/images/badges/XPM_BADGING_GoogleAssistant_VER.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1578001078</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Assistant Relay is a Node.js server that exposes the Google Assistant as a REST API.</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -37,9 +38,8 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <WebUI>http://[IP]:[PORT:3000]/</WebUI>
-  <Icon>https://developers.google.com/assistant/images/badges/XPM_BADGING_GoogleAssistant_VER.png</Icon>
-  <BaseImage>node</BaseImage>
-  <Config Name="Config Directory" Target="/opt/assistant-relay/bin" Default="/mnt/cache/app_config/assistant-relay" Mode="rw" Description="This path is where Assistant Relay will store it's configuration files." Type="Path" Display="always" Required="true" Mask="false"/>
-  <ExtraParams></ExtraParams>
+  <Environment/>
+  <Labels/>
+  <Config Name="Config Directory" Target="/opt/assistant-relay/bin" Default="/mnt/cache/appdata/assistant-relay" Mode="rw" Description="This path is where Assistant Relay will store it's configuration files." Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/assistant-relay</Config>
+  <Config Name="Web Interface" Target="3000" Default="3000" Mode="tcp" Description="Container Port: 3000" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
 </Container>
